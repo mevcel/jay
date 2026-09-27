@@ -1,0 +1,23 @@
+name: Bug report
+description: Jay replied wrong, didn't reply, or something broke.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Link the post or paste the message and Jay's reply.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or message id
+      description: Anything from the logs or `jay stats`. Remove secrets first.
+      render: shell

@@ -1,0 +1,28 @@
+name: Knowledge update
+description: A fee, address, flow or answer Jay gives is wrong or out of date.
+labels: [knowledge]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: Knowledge file
+      placeholder: knowledge/20-fees.md
+  - type: textarea
+    id: current
+    attributes:
+      label: What it says now
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Docs page, contract, or announcement that confirms it.
+    validations:
+      required: true

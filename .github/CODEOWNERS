@@ -1,0 +1,7 @@
+# Default reviewers for everything in this repo.
+* @mevcel
+
+# Safety checks and what Jay is allowed to say need an extra look.
+/src/safety/ @mevcel
+/src/agent/persona.ts @mevcel
+/knowledge/ @mevcel
