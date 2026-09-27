@@ -18,8 +18,8 @@
 [![node](https://img.shields.io/badge/node-%3E%3D22-1a2740?style=flat-square)](#dependencies)
 [![state](https://img.shields.io/badge/state-SQLite-1a2740?style=flat-square)](#stack)
 [![tests](https://img.shields.io/badge/tests-vitest-1a2740?style=flat-square)](#testing)
-[![ci](https://github.com/mevcel/jay/actions/workflows/ci.yml/badge.svg)](https://github.com/mevcel/jay/actions/workflows/ci.yml)
-[![codeql](https://github.com/mevcel/jay/actions/workflows/codeql.yml/badge.svg)](https://github.com/mevcel/jay/actions/workflows/codeql.yml)
+[![ci](https://github.com/mevcel/jayagent/actions/workflows/ci.yml/badge.svg)](https://github.com/mevcel/jayagent/actions/workflows/ci.yml)
+[![codeql](https://github.com/mevcel/jayagent/actions/workflows/codeql.yml/badge.svg)](https://github.com/mevcel/jayagent/actions/workflows/codeql.yml)
 [![PRs](https://img.shields.io/badge/PRs-welcome-1a2740?style=flat-square)](CONTRIBUTING.md)
 
 </div>
@@ -180,8 +180,8 @@ Each handoff posts a card to the team's Discord or Slack channel with the severi
 ## Getting started
 
 ```bash
-git clone https://github.com/mevcel/jay.git
-cd jay
+git clone https://github.com/mevcel/jayagent.git
+cd jayagent
 npm install
 cp .env.example .env
 ```
