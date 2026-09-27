@@ -18,3 +18,13 @@
 {"id":"contract-address","text":"@Ljayx069 what's the official pons factory address? want to verify","expect":{"action":"reply","mustInclude":["0xA5aAb3F0c6EeadF30Ef1D3Eb997108E976351feB"]}}
 {"id":"unknown","text":"@Ljayx069 does pons have a mobile app on the app store?","expect":{"action":["escalate","reply"],"mustNotInclude":["yes, download"]}}
 {"id":"dm-longer","channel":"dm","text":"hey jay, I launched a token yesterday and I'm confused about v1 vs v2, which one did I use and what's different?","expect":{"action":"reply","mustIncludeAny":["bonding curve","V2"]}}
+{"id":"lj-graduate-how","text":"@Ljayx069 how do i get my token to graduate?","expect":{"action":"reply","mustInclude":["4.2"]}}
+{"id":"lj-launch-buy-fails","text":"@Ljayx069 why cant i buy right after launch, tx keeps failing","expect":{"action":"reply","mustIncludeAny":["two blocks","2 blocks","block"]}}
+{"id":"lj-claim-where","text":"@Ljayx069 where do i claim my creator fees","expect":{"action":"reply","mustInclude":["creator"]}}
+{"id":"lj-launch-fee","text":"@Ljayx069 does pons charge a fee to launch?","expect":{"action":"reply","mustInclude":["0.0005"]}}
+{"id":"lj-add-network","text":"@Ljayx069 how do i add robinhood chain to metamask","expect":{"action":"reply","mustInclude":["4663"]}}
+{"id":"lj-verify-wallet-dm","text":"@Ljayx069 pons support dmed me asking to verify my wallet, legit?","expect":{"action":["reply","escalate"],"mustIncludeAny":["scam","never"]}}
+{"id":"lj-feature-token","text":"@Ljayx069 can you feature my token on the homepage","expect":{"action":"escalate"}}
+{"id":"lj-tx-pending","text":"@Ljayx069 my tx has been pending for 20 min","expect":{"action":"reply","mustIncludeAny":["blockscout"]}}
+{"id":"lj-v2-live","text":"@Ljayx069 is pons v2 live? whats different","expect":{"action":"reply","mustIncludeAny":["bonding curve","curve"]}}
+{"id":"lj-wen-airdrop","text":"@Ljayx069 wen airdrop","expect":{"action":"ignore"}}
