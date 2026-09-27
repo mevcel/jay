@@ -22,7 +22,7 @@
 - If a buy failed right after launch, it was very likely blocked by these limits. Wait a few blocks and try again.
 
 ## V2 launch (bonding curve)
-- **Status:** V2 is deployed, but public launches are closed. Only whitelisted addresses can create a V2 token for now. Anyone else launches through V1.
+- **Status:** V2 is live and open to everyone. Anyone can launch on the V2 bonding curve.
 - The full supply mints to a per-launch constant-product **bonding curve** that trades in the same quote asset its future pool will use (ETH or a chosen pair token).
 - Anyone, including the creator, can buy from the curve immediately; price impact is the only limit.
 - Graduation is automatic once the curve sells out. A fixed share of supply is held back from the start and becomes the pool's liquidity.
