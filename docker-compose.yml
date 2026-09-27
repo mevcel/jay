@@ -1,0 +1,17 @@
+# Pons Family: single-service deployment for Jay (@Ljayx069).
+services:
+  jay:
+    build: .
+    image: ponsfamily/jay:latest
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - jay-data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+volumes:
+  jay-data:

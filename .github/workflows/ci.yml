@@ -1,0 +1,31 @@
+# Pons Family: CI for Jay: format, typecheck, unit tests, and image build.
+# The behavioral eval (npm run eval) calls the model API and is run on demand
+# via the "eval" workflow, not on every push.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t ponsfamily/jay:ci .

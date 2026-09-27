@@ -1,0 +1,24 @@
+# Pons Family: on-demand behavioral eval for Jay against the live model API.
+# Requires the ANTHROPIC_API_KEY repository secret.
+name: eval
+
+on:
+  workflow_dispatch:
+    inputs:
+      filter:
+        description: "Only run cases whose id contains this text (blank = all)"
+        required: false
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run eval -- ${{ inputs.filter }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
