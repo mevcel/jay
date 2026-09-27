@@ -18,7 +18,9 @@
 [![node](https://img.shields.io/badge/node-%3E%3D22-1a2740?style=flat-square)](#dependencies)
 [![state](https://img.shields.io/badge/state-SQLite-1a2740?style=flat-square)](#stack)
 [![tests](https://img.shields.io/badge/tests-vitest-1a2740?style=flat-square)](#testing)
-[![PRs](https://img.shields.io/badge/PRs-welcome-1a2740?style=flat-square)](#contributing)
+[![ci](https://github.com/mevcel/jay/actions/workflows/ci.yml/badge.svg)](https://github.com/mevcel/jay/actions/workflows/ci.yml)
+[![codeql](https://github.com/mevcel/jay/actions/workflows/codeql.yml/badge.svg)](https://github.com/mevcel/jay/actions/workflows/codeql.yml)
+[![PRs](https://img.shields.io/badge/PRs-welcome-1a2740?style=flat-square)](CONTRIBUTING.md)
 
 </div>
 
@@ -251,6 +253,10 @@ The scenario set covers fee and chain facts, failed launch buys, zero claimable 
 .
 ├── README.md
 ├── LICENSE
+├── SECURITY.md                  # how to report vulnerabilities
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── CHANGELOG.md
 ├── jay.manifest.json            # build and runtime manifest
 ├── .env.example                 # every config key, documented
 ├── Dockerfile                   # two-stage production image
@@ -287,7 +293,7 @@ The scenario set covers fee and chain facts, failed launch buys, zero claimable 
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   └── RUNBOOK.md
-└── .github/workflows/           # ci.yml, eval.yml
+└── .github/                     # workflows (ci, codeql, eval), templates, dependabot, CODEOWNERS
 ```
 
 ## Dependencies
@@ -319,11 +325,12 @@ Versions are pinned in `package.json` and locked in `package-lock.json`.
 - Links are limited to an allowlist. Unknown addresses and cashtags are blocked.
 - Look-alike support accounts are dropped at the filter step, and lost-funds reports go to the team at high severity.
 - `@Ljayx069` should carry X's **Automated** account label, linked to the managing account. If someone asks, Jay tells them straight that replies are automated and that a person follows up on handoffs.
-- Found a security issue? Please report it privately. Contact details are on [ponsfamily.com](https://ponsfamily.com).
+- Dependencies are audited in CI, updated weekly by Dependabot, and the code is scanned by CodeQL.
+- Found a security issue? Please report it privately as described in [`SECURITY.md`](SECURITY.md).
 
 ## Contributing
 
-Issues and pull requests are welcome. Run `npm test` and `npm run format:check` before opening a PR, and `npm run eval` for anything that touches the knowledge base, Jay's instructions, or the model settings.
+Issues and pull requests are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to update the knowledge base or the code, and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md). Changes are tracked in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## License
 
