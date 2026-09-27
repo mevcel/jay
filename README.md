@@ -4,24 +4,6 @@
 
 # Jay: Pons Family customer support
 
-<a href="https://ponsfamily.com">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2800&pause=900&color=1a2740&center=true&vCenter=true&width=680&lines=Support+desk+for+%40Ljayx069+on+X;Answers+Pons+questions+in+mentions+and+DMs;Live+token%2C+graduation+and+tx+lookups+on+Robinhood+Chain;Never+asks+for+keys.+Never+shills.+Never+links+off-site.;Hands+lost-funds+reports+to+the+team+right+away" alt="Typing SVG" />
-</a>
-
-[![License: MIT](https://img.shields.io/badge/license-MIT-1a2740?style=for-the-badge)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/typescript-5.9-1a2740?style=for-the-badge&logo=typescript&logoColor=white)](#stack)
-[![Chain](https://img.shields.io/badge/chain-Robinhood_Chain-1a2740?style=for-the-badge)](#stack)
-[![Support](https://img.shields.io/badge/support-%40Ljayx069-1a2740?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Ljayx069)
-[![Website](https://img.shields.io/badge/website-ponsfamily.com-1a2740?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ponsfamily.com)
-[![X](https://img.shields.io/badge/follow-%40ponsdotfamily-1a2740?style=for-the-badge&logo=x&logoColor=white)](https://x.com/ponsdotfamily)
-
-[![node](https://img.shields.io/badge/node-%3E%3D22-1a2740?style=flat-square)](#dependencies)
-[![state](https://img.shields.io/badge/state-SQLite-1a2740?style=flat-square)](#stack)
-[![tests](https://img.shields.io/badge/tests-vitest-1a2740?style=flat-square)](#testing)
-[![ci](https://github.com/mevcel/jayagent/actions/workflows/ci.yml/badge.svg)](https://github.com/mevcel/jayagent/actions/workflows/ci.yml)
-[![codeql](https://github.com/mevcel/jayagent/actions/workflows/codeql.yml/badge.svg)](https://github.com/mevcel/jayagent/actions/workflows/codeql.yml)
-[![PRs](https://img.shields.io/badge/PRs-welcome-1a2740?style=flat-square)](CONTRIBUTING.md)
-
 </div>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a2740,100:05070d&height=3&section=header" width="100%" />
