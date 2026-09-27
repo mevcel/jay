@@ -1,5 +1,5 @@
 # Pons Family: on-demand behavioral eval for Jay against the live model API.
-# Requires the ANTHROPIC_API_KEY repository secret.
+# Requires the JAY_API_KEY repository secret.
 name: eval
 
 on:
@@ -21,4 +21,4 @@ jobs:
       - run: npm ci
       - run: npm run eval -- ${{ inputs.filter }}
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          JAY_API_KEY: ${{ secrets.JAY_API_KEY }}

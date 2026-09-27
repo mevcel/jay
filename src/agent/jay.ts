@@ -13,6 +13,8 @@ import { JAY_TOOLS, parseDecision, runTool, SUBMIT_DECISION } from "./tools.js";
 type Effort = "low" | "medium" | "high" | "xhigh" | "max";
 
 export interface PonsJayAgentOptions {
+  /** Model API key (`JAY_API_KEY`). */
+  apiKey?: string;
   model: string;
   effort: Effort;
   kb: PonsKnowledgeBase;
@@ -56,7 +58,7 @@ export class PonsJayAgent {
   private readonly maxIterations: number;
 
   constructor(private readonly opts: PonsJayAgentOptions) {
-    this.client = opts.client ?? new Anthropic({ maxRetries: 3 });
+    this.client = opts.client ?? new Anthropic({ apiKey: opts.apiKey, maxRetries: 3 });
     this.maxIterations = opts.maxIterations ?? 6;
     this.system = [
       { type: "text", text: JAY_SYSTEM_PROMPT },

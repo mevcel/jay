@@ -50,7 +50,7 @@ async function main(argv: string[]) {
 function buildAgent(cfg: ReturnType<typeof loadConfig>) {
   const kb = loadKnowledgeBase();
   const chain = new PonsChainReader(cfg.chain.rpcUrl, cfg.chain.blockscoutApiUrl);
-  return new PonsJayAgent({ model: cfg.model, effort: cfg.effort, kb, chain });
+  return new PonsJayAgent({ apiKey: cfg.apiKey, model: cfg.model, effort: cfg.effort, kb, chain });
 }
 
 async function live(once: boolean, dryFlag: boolean) {

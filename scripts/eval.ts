@@ -38,6 +38,7 @@ const cases: EvalCase[] = readFileSync(new URL("../evals/cases.jsonl", import.me
 
 const cfg = loadConfig(process.env, { requireX: false });
 const agent = new PonsJayAgent({
+  apiKey: cfg.apiKey,
   model: cfg.model,
   effort: cfg.effort,
   kb: loadKnowledgeBase(),

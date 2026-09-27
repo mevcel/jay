@@ -10,7 +10,7 @@ const bool = z
   .transform((v) => v === "true" || v === "1");
 
 const schema = z.object({
-  ANTHROPIC_API_KEY: z.string().optional(),
+  JAY_API_KEY: z.string().default(""),
   JAY_MODEL: z.string().default("claude-opus-5"),
   JAY_EFFORT: z.enum(["low", "medium", "high", "xhigh", "max"]).default("medium"),
 
@@ -57,6 +57,7 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env, opts = { requir
     if (missing.length) throw new PonsConfigError(missing.map((k) => `${k}: required`));
   }
   return {
+    apiKey: c.JAY_API_KEY || undefined,
     model: c.JAY_MODEL,
     effort: c.JAY_EFFORT,
     x: {

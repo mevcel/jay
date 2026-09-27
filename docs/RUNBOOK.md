@@ -13,7 +13,7 @@ Operating guide for the team running [@Ljayx069](https://x.com/Ljayx069).
 
 ### Model API key
 
-Create an API key in the Pons Family console workspace and set `ANTHROPIC_API_KEY`. A workspace spend limit is recommended.
+Create an API key in the Pons Family console workspace and set `JAY_API_KEY`. A workspace spend limit is recommended.
 
 ### Escalation channel
 

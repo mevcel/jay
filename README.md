@@ -40,7 +40,6 @@ Website: [ponsfamily.com](https://ponsfamily.com) · Docs: [docs.ponsfamily.com]
 - [When a human takes over](#when-a-human-takes-over)
 - [Getting started](#getting-started)
 - [Commands](#commands)
-- [Configuration](#configuration)
 - [Deployment](#deployment)
 - [Testing](#testing)
 - [Stack](#stack)
@@ -185,7 +184,7 @@ npm install
 cp .env.example .env
 ```
 
-Fill in `ANTHROPIC_API_KEY` in `.env`, then talk to Jay locally. Nothing touches X:
+Fill in the keys in `.env` (every key is described in [`.env.example`](.env.example)), then talk to Jay locally. Nothing touches X:
 
 ```bash
 npm run chat
@@ -209,23 +208,6 @@ npm start
 | `jay stats [hours]`    | Counts by outcome and topic, plus open handoffs                   |
 
 While developing, use `npx tsx src/index.ts <command>` or the `npm run` scripts.
-
-## Configuration
-
-Everything is set with environment variables and validated on startup (`src/config.ts`). [`.env.example`](.env.example) lists every key.
-
-| Variable                                                         | Default            | Notes                                                                |
-| ---------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------- |
-| `ANTHROPIC_API_KEY`                                              | none               | API key for the reply engine                                         |
-| `JAY_MODEL`                                                      | see `.env.example` | Only change it after running the test set                            |
-| `JAY_EFFORT`                                                     | `medium`           | `low` through `max`. Support replies rarely need more than `medium`. |
-| `X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET` | none               | OAuth 1.0a user credentials for `@Ljayx069`                          |
-| `X_ENABLE_DMS`                                                   | `false`            | Needs DM read/write permission on the X app                          |
-| `DRY_RUN`                                                        | `false`            | Draft and log, never post                                            |
-| `POLL_INTERVAL_SECONDS`                                          | `120`              | Match to your X API tier's read limits                               |
-| `MAX_REPLIES_PER_HOUR`                                           | `40`               | Rolling cap on public replies                                        |
-| `ESCALATION_WEBHOOK_URL`                                         | none               | Discord or Slack incoming webhook for handoffs                       |
-| `HUMAN_HANDOFF_HANDLES`                                          | `ponsdotfamily`    | Accounts Jay may tag when handing off                                |
 
 ## Deployment
 
@@ -255,7 +237,7 @@ The scenario set covers fee and chain facts, failed launch buys, zero claimable 
 | ------------ | ---------------------------------------------------------------------------------------------- |
 | Language     | TypeScript `5.9`, Node.js `>=22`, ESM                                                          |
 | Channel      | X API v2: mentions timeline, threaded replies, DMs (OAuth 1.0a user context)                   |
-| Reply engine | Anthropic Messages API with tool use, prompt caching on the instructions and knowledge base    |
+| Reply engine | Hosted model API with tool use, prompt caching on the instructions and knowledge base          |
 | Chain        | Robinhood Chain, id `4663`, RPC `https://rpc.mainnet.chain.robinhood.com`                      |
 | Product      | [ponsfamily.com](https://ponsfamily.com)                                                       |
 | V1 factory   | `0xA5aAb3F0c6EeadF30Ef1D3Eb997108E976351feB`                                                   |
@@ -312,7 +294,6 @@ The scenario set covers fee and chain facts, failed launch buys, zero claimable 
 
 Versions are pinned in `package.json` and locked in `package-lock.json`.
 
-- `@anthropic-ai/sdk` `0.128.0`: reply engine API client
 - `twitter-api-v2` `1.29.1`: X API v2 with OAuth 1.0a signing
 - `viem` `2.56.9`: read-only Robinhood Chain RPC and ABI decoding
 - `better-sqlite3` `13.0.3`: local state
