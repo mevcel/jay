@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="media/logo.png" alt="Jay logo" width="96" height="96" />
+<a href="https://x.com/Ljayx069"><img src="media/jay.png" alt="Jay (@Ljayx069)" width="140" height="140" /></a>
 
 # Jay: Pons Family customer support
 
@@ -274,7 +274,7 @@ The scenario set covers fee and chain facts, failed launch buys, zero claimable 
 ├── Dockerfile                   # two-stage production image
 ├── docker-compose.yml
 ├── media/
-│   └── logo.png
+│   └── jay.png                  # @Ljayx069 profile picture
 ├── knowledge/                   # what Jay knows, as markdown
 │   ├── 00-overview.md
 │   ├── ...
