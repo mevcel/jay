@@ -2,7 +2,7 @@
 
 <a href="https://x.com/Ljayx069"><img src="media/jay.png" alt="Jay (@Ljayx069)" width="140" height="140" /></a>
 
-# Jay: Pons Family customer support
+# Pons X customer support agent
 
 </div>
 
