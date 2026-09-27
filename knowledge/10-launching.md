@@ -15,12 +15,15 @@
 - The token address is shown on the launch confirmation and on the explorer.
 
 ## Launch protection (anti-snipe)
-- On the launch block, **only the creator** can buy.
-- For the next **2 blocks**, buys are limited to **5.5% of supply** per transaction and **5% of supply** held per wallet.
+- Buys from the pool are protected for the **first two blocks** after launch.
+- On the launch block itself, only the **creator's initial buy** can execute.
+- For the rest of the window, each wallet can hold at most **5% of supply** and buy at most **5.5% of supply**.
 - After that window, the token behaves like a normal ERC-20 with no limits.
 - If a buy failed right after launch, it was very likely blocked by these limits. Wait a few blocks and try again.
 
 ## V2 launch (bonding curve)
+- **Status:** V2 is deployed, but public launches are closed. Only whitelisted addresses can create a V2 token for now. Anyone else launches through V1.
 - The full supply mints to a per-launch constant-product **bonding curve** that trades in the same quote asset its future pool will use (ETH or a chosen pair token).
 - Anyone, including the creator, can buy from the curve immediately; price impact is the only limit.
+- Graduation is automatic once the curve sells out. A fixed share of supply is held back from the start and becomes the pool's liquidity.
 - When the curve fills it **graduates** into a full-range Uniswap **V4** pool whose position is permanently locked.

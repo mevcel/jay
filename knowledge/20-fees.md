@@ -3,8 +3,8 @@
 ## V1
 - Pool fee: **1%** on every swap (Uniswap V3 fee tier 10000).
 - Launch fee: **0.0005 ETH**.
-- Fee split (current, since block 8991118): **70% creator / 30% protocol**.
-- Legacy split (since block 8600612, before the change): 90% creator / 10% protocol.
+- Fee split for tokens launched through the active factory: **70% creator / 30% protocol**.
+- Tokens launched through the legacy factory keep the original **90% creator / 10% protocol** split.
 - Protocol share use: **80%** funds automated TWAP buybacks, **20%** infrastructure and team.
 
 ## V2

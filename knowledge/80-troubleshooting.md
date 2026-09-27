@@ -1,6 +1,6 @@
 # Troubleshooting
 
-- **Transaction failed right after a launch:** anti-snipe limits apply for the first blocks (creator-only on block 0; 5.5% per-buy and 5% per-wallet caps for 2 blocks). Retry after a few blocks.
+- **Transaction failed right after a launch:** anti-snipe protection covers the first two blocks (only the creator's initial buy on the launch block, then 5.5% per-buy and 5% per-wallet caps). Retry after a few blocks.
 - **"Insufficient funds" / cannot pay gas:** the wallet needs ETH on Robinhood Chain (chain id 4663), not on Ethereum mainnet.
 - **Token not showing in wallet:** import it manually using the token contract address from the token page or explorer.
 - **Swap reverted / slippage:** volatile tokens can move between quote and execution. Raise slippage modestly or reduce size. Never raise slippage on a token you do not trust.
