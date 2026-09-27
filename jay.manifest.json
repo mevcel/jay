@@ -1,0 +1,52 @@
+{
+  "project": "pons.family support",
+  "name": "Jay",
+  "channel": "x.com/Ljayx069",
+  "environment": "production",
+  "network": "Robinhood Chain",
+  "chainId": 4663,
+  "primaryArtifact": "dist/index.js",
+  "runtime": {
+    "node": ">=22",
+    "module": "esm"
+  },
+  "language": "typescript",
+  "compiler": "5.9.3",
+  "contracts": {
+    "v1Factory": "0xA5aAb3F0c6EeadF30Ef1D3Eb997108E976351feB",
+    "v1LegacyFactory": "0x0c37a24F5D23A486FA692d1500881d698B1F77a4",
+    "v2Factory": "0x7eD598BcEf8bd9Edd8C97A195C6d13f40801EC7e"
+  },
+  "knowledge": [
+    "knowledge/00-overview.md",
+    "knowledge/10-launching.md",
+    "knowledge/20-fees.md",
+    "knowledge/30-creator-fees.md",
+    "knowledge/40-graduation.md",
+    "knowledge/50-chain.md",
+    "knowledge/60-contracts.md",
+    "knowledge/70-safety.md",
+    "knowledge/80-troubleshooting.md",
+    "knowledge/90-escalation.md"
+  ],
+  "sources": [
+    "src/index.ts",
+    "src/config.ts",
+    "src/errors.ts",
+    "src/types.ts",
+    "src/agent/jay.ts",
+    "src/agent/persona.ts",
+    "src/agent/tools.ts",
+    "src/chain/robinhood.ts",
+    "src/knowledge/loader.ts",
+    "src/pipeline/triage.ts",
+    "src/pipeline/processor.ts",
+    "src/pipeline/runner.ts",
+    "src/safety/guardrails.ts",
+    "src/escalation/notify.ts",
+    "src/store/state.ts",
+    "src/x/client.ts",
+    "src/util/logger.ts",
+    "src/util/sleep.ts"
+  ]
+}
